@@ -1,11 +1,10 @@
 package org.apache.hadoop.hbase.regionserver;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.hbase.coprocessor.BaseRegionObserver;
 import org.apache.hadoop.hbase.coprocessor.ObserverContext;
 import org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment;
 import org.apache.hadoop.hbase.util.Pair;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 
@@ -13,7 +12,7 @@ import java.util.List;
  * Observe region server and intercept split requests and split on median rowkey.
  */
 public class MedianSplitObserver extends BaseRegionObserver {
-    static final Log LOG = LogFactory.getLog(MedianSplitObserver.class);
+    private static final Logger LOG = Logger.getLogger(MedianSplitObserver.class);
 
     @Override
     public void preSplit(ObserverContext<RegionCoprocessorEnvironment> e) {

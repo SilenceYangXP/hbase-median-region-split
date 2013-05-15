@@ -1,21 +1,20 @@
 package org.apache.hadoop.hbase.regionserver;
 
+import org.apache.hadoop.hbase.KeyValue;
+import org.apache.hadoop.hbase.util.Bytes;
+import org.apache.hadoop.hbase.util.Pair;
+import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.apache.hadoop.hbase.KeyValue;
-import org.apache.hadoop.hbase.util.Bytes;
-import org.apache.hadoop.hbase.util.Pair;
-
 /**
  * Utilities used by the {@link MedianSplitPolicy} and {@link MedianSplitObserver} classes
  */
 public class MedianSplitUtil {
-    static final Log LOG = LogFactory.getLog(MedianSplitUtil.class);
+    private static final Logger LOG = Logger.getLogger(MedianSplitUtil.class);
 
     /**
      * Sample region store files for median split key and size in bytes
