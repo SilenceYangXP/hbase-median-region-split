@@ -61,7 +61,7 @@ Yes.  Median Region Split attempts to split regions in half (in terms of the res
 
 #### Do I need both the coprocessor and the policy?
 
-No.  Use one or the other, they provide the same functionality.  I recommend running the policy on HBase 0.94+, and the observer on HBase 0.92.
+No.  Use one or the other; they provide the same functionality.  I recommend running the policy on HBase 0.94+, and the observer on HBase 0.92.
 
 ## License
 
