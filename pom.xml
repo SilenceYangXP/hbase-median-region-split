@@ -4,7 +4,7 @@
 
     <groupId>com.nearinfinity.honeycomb</groupId>
     <artifactId>median-region-split</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
 
     <name>Median Region Split</name>
 
